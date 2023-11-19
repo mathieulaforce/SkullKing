@@ -19,3 +19,5 @@ class Player{
         this.hand.removeCard(card);
     }
 }
+
+export default Player;

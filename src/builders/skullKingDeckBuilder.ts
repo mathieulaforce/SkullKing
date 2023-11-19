@@ -1,5 +1,6 @@
 import Card from "../cardset/card";
 import { Deck } from "../cardset/deck";
+import { DeckBuilder } from "../types";
 
 export const ALL_SUITS = ["blue", "red", "yellow", "black"] as const;
 export type SuitTuple = typeof ALL_SUITS;
@@ -61,7 +62,7 @@ const generateSpecialCards = (): Array<Card> => {
   ];
 };
 
-const skullKingDeckBuilder =  {
+const skullKingDeckBuilder : DeckBuilder =  {
   generateDeck: () => {
     const cards = [...generateSuitCards(), ...generateSpecialCards()];
     return new Deck(cards);
